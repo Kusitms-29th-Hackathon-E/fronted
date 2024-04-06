@@ -19,3 +19,8 @@ data class Join(
     val password: String,
     val phoneNumber: String
 )
+
+data class Mining(
+    val question: String,
+    val miningId: Int
+)

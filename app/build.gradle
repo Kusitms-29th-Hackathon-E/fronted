@@ -20,9 +20,10 @@ android {
         def localProperties = new Properties()
         localProperties.load(new FileInputStream(rootProject.file("local.properties")))
         buildConfigField("String", "KAKAO_APP_KEY", "\"${localProperties.getProperty("kakao.key")}\"")
+        buildConfigField("String", "KAKAO_APP_KEY_MAN", "\"${localProperties.getProperty("kakao.key.manifest")}\"")
 
         defaultConfig {
-            manifestPlaceholders = ["KAKAO_APP_KEY" : "\"${localProperties.getProperty("kakao.key")}\""]
+            manifestPlaceholders = ["KAKAO_APP_KEY_MAN" : "\"${localProperties.getProperty("kakao.key.manifest")}\""]
         }
     }
 
@@ -77,6 +78,9 @@ dependencies {
     //카카오 로그인
     implementation ("com.kakao.sdk:v2-user:2.19.0")
     implementation ("com.google.android.material:material:1.11.0")
+
+    // 유튜브
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
 
     //implementation 'androidx.activity:activity-compose:1.7.1' // 이미지
 }

@@ -10,7 +10,14 @@ interface AuthJoinService { // 회원가입
     fun sendAuthRequest(@Body join: Join): Call<Void>
 }
 
-interface MyPageService {
-    @GET("user/mypage")
-    fun getUser(@Header("Authorization") authToken: String): Call<User>
+
+interface MiningService { // 질문 생성
+    @POST("/mining")
+    fun sendMiningRequest(@Body platformUrl: String): Call<Mining>
+}
+
+interface AddMiningService {
+    @PATCH("/mining/{miningId}")
+    fun addMiningRequest(@Path("miningId") miningId: Int,
+                         @Body answer: String): Call<Void>
 }
