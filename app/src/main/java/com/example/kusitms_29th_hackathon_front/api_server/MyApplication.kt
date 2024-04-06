@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -24,4 +25,6 @@ class MyApplication {
     }
 
     val authJoinService = retrofit.create(AuthJoinService::class.java)
+    val miningService = retrofit.create(MiningService::class.java)
+    val addMiningService = retrofit.create(AddMiningService::class.java)
 }

@@ -24,3 +24,19 @@ object JoinManager {
         })
     }
 }
+
+object MiningManager {
+    fun miningService(platformUrl: String, callback: Callback<Mining>) {
+        val apiService = MyApplication().miningService
+        val call = apiService.sendMiningRequest(platformUrl)
+        call.enqueue(callback)
+    }
+}
+
+object AddMiningManager {
+    fun addMiningService(miningId: Int, answer: String, callback: Callback<Void>) {
+        val apiService = MyApplication().addMiningService
+        val call = apiService.addMiningRequest(miningId, answer)
+        call.enqueue(callback)
+    }
+}

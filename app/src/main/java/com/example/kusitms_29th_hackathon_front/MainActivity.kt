@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //toolbar
-        setSupportActionBar(binding.toolbar)
-
         binding.startBtn.setOnClickListener {
             val intent = Intent(this, Mining1Activity::class.java)
             startActivity(intent)

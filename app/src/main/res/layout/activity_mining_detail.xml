@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/gray20"
+    android:orientation="vertical"
+    tools:context=".mining.MiningDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_close"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/primary60"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="Q. " />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="어떻게 하면 야구를 처음 접하는 사람들도 흥미를 느끼게 할 수 있을까?" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="26dp"
+        android:hint="추가 마이닝 입력하기..."
+        android:gravity="start"
+        android:textColor="@color/gray90"
+        android:textColorHint="@color/gray60"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:layout_gravity="bottom"
+        android:fontFamily="@font/pretendard_regular"
+        android:background="@drawable/bg_edit_text" />
+
+</FrameLayout>
