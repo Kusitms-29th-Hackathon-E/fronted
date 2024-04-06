@@ -73,18 +73,20 @@
                     android:layout_width="100dp"
                     android:layout_height="115dp"
                     android:layout_marginLeft="50dp"
-                    android:layout_gravity="end|bottom"
+                    android:layout_gravity="end"
                     android:layout_marginTop="50dp"
                     android:src="@drawable/ic_mining_face"/>
+
+                <ImageView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="780dp"
+                    android:layout_marginTop="140dp"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_mining_list"/>
                 
             </FrameLayout>
-            
-            <ImageView
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="780dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_mining_list"/>
             
         </LinearLayout>
         

@@ -1,6 +1,7 @@
 package com.example.kusitms_29th_hackathon_front.mining
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -9,8 +10,6 @@ import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import com.example.kusitms_29th_hackathon_front.R
 import com.example.kusitms_29th_hackathon_front.api_server.AddMiningManager
-import com.example.kusitms_29th_hackathon_front.api_server.Mining
-import com.example.kusitms_29th_hackathon_front.api_server.MiningManager
 import com.example.kusitms_29th_hackathon_front.databinding.ActivityMining2Binding
 import retrofit2.Call
 import retrofit2.Callback
@@ -64,6 +63,10 @@ class Mining2Activity : AppCompatActivity() {
                         val mining = response.body()
                         mining?.let {
                         }
+                        val intent = Intent(this@Mining2Activity, MiningDoneActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        startActivity(intent)
+                        finish()
                     } else {
                         val errorBody = response.errorBody()?.string()
                         Log.e("서버 테스트", "오류1: $errorBody")

@@ -27,7 +27,8 @@ class Mining3Activity : AppCompatActivity() {
         }
 
         binding.list.setOnClickListener {
-
+            val intent = Intent(this, MiningDetailActivity::class.java)
+            startActivity(intent)
         }
     }
 }
