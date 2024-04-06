@@ -9,18 +9,16 @@ import retrofit2.http.POST
 
 interface LoginItf {
 
-    @POST("/user/signup")
-    @FormUrlEncoded
+    // 회원가입
+    @POST("/oauth/KAKAO")
     fun postSignUp(
-        @Header("Authorization") authorization: String,
-        @Field("enterprise") enterprise: String,
-        @Field("type") type: String,
-        @Field("email") email: String
-    ): Call<SignUpResponse>
+        @Header("OAuth-AccessToken") authorization: String
+    ): Call<Void>
 
-    @GET("/user/login")
+    // 로그인 정보 확인
+    @GET("/oauth/KAKAO")
     fun getLogIn(
-        @Header("Authorization") idToken: String
+        @Header("OAuth-AccessToken") accessToken: String
     ): Call<getLogInResponse>
 
 }

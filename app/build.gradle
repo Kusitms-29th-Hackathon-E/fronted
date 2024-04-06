@@ -20,9 +20,10 @@ android {
         def localProperties = new Properties()
         localProperties.load(new FileInputStream(rootProject.file("local.properties")))
         buildConfigField("String", "KAKAO_APP_KEY", "\"${localProperties.getProperty("kakao.key")}\"")
+        buildConfigField("String", "KAKAO_APP_KEY_MAN", "\"${localProperties.getProperty("kakao.key.manifest")}\"")
 
         defaultConfig {
-            manifestPlaceholders = ["KAKAO_APP_KEY" : "\"${localProperties.getProperty("kakao.key")}\""]
+            manifestPlaceholders = ["KAKAO_APP_KEY_MAN" : "\"${localProperties.getProperty("kakao.key.manifest")}\""]
         }
     }
 

@@ -20,6 +20,6 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(applicationContext, LoginActivity::class.java))
                 finish()
             }
-        }, 2, TimeUnit.SECONDS)
+        }, 0, TimeUnit.SECONDS)
     }
 }

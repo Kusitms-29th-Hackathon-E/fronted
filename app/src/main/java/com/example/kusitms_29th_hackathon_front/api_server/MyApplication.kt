@@ -10,7 +10,7 @@ import java.util.*
 
 class MyApplication {
     val retrofit = Retrofit.Builder()
-        .baseUrl("http://52.78.63.120") // 서버 URL
+        .baseUrl("http://3.37.99.87") // 서버 URL
         .addConverterFactory(GsonConverterFactory.create(getGson()))
         .client(OkHttpClient.Builder().build())
         .build()
