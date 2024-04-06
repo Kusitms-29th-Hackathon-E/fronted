@@ -21,6 +21,7 @@ class Mining3Activity : AppCompatActivity() {
         binding.nextBtn.setOnClickListener {
             // MainActivity를 시작하고, 스택에 쌓인 모든 액티비티를 종료
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("new", 1)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
             finish()

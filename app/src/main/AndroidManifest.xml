@@ -24,6 +24,9 @@
         android:theme="@style/Theme.Kusitms29thHackathonfront"
         tools:targetApi="31">
         <activity
+            android:name=".HomeMiningDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyPageActivity"
             android:exported="false" />
         <activity

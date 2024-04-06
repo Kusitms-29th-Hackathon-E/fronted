@@ -15,6 +15,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.You
 
 class MiningDetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityMiningDetailBinding
+    var new: Int ?= -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,12 @@ class MiningDetailActivity : AppCompatActivity() {
 
         binding.closeBtn.setOnClickListener {
             finish()
+        }
+
+        new = intent.getIntExtra("done", -1)
+
+        if (new == 1) {
+            binding.content.visibility = View.GONE
         }
 
         // EditText에 TextWatcher 추가

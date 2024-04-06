@@ -1,68 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
     android:background="@color/gray10"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="89dp"
+                android:layout_height="26dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_main" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/my_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_mypage" />
+
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="89dp"
-            android:layout_height="26dp"
+            android:id="@+id/month_btn"
+            android:layout_width="83dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="25dp"
             android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo_main" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:src="@drawable/ic_month" />
 
         <ImageView
-            android:id="@+id/my_btn"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="455dp"
+            android:layout_marginTop="15dp"
             android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_mypage" />
+            android:src="@drawable/img_callender" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/gray20"
+            android:text="오늘의 마이닝 시작하기"
+            android:background="@drawable/btn_primary" />
 
     </LinearLayout>
-
+    
     <ImageView
-        android:id="@+id/month_btn"
-        android:layout_width="83dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="25dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_month" />
-
-    <ImageView
+        android:id="@+id/done"
         android:layout_width="match_parent"
-        android:layout_height="455dp"
-        android:layout_marginTop="15dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_callender" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/start_btn"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="550dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="20dp"
-        android:textSize="18dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:textColor="@color/gray20"
-        android:text="오늘의 마이닝 시작하기"
-        android:background="@drawable/btn_primary" />
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/img_home"/>
 
-</LinearLayout>
+</FrameLayout>
